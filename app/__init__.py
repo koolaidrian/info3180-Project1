@@ -12,7 +12,7 @@ user = 'oshea'
 password = '@Xperia!123'
 database = 'Comp3180_Project1'
 default = "postgresql://%s:%s@localhost/%s" % (user,password,database) 
-heruko = 'postgres://emgxrvvcxwkegj:b88d1a34cd8337edfaf89daf766753b402da35f0296f16e66863b063a2f6479b@ec2-3-234-169-147.compute-1.amazonaws.com:5432/dfpsub468628mv'
+heruko = 'postgresql://emgxrvvcxwkegj:b88d1a34cd8337edfaf89daf766753b402da35f0296f16e66863b063a2f6479b@ec2-3-234-169-147.compute-1.amazonaws.com:5432/dfpsub468628mv'
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = heruko
