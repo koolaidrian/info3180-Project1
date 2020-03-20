@@ -1,0 +1,137 @@
+body{
+    <!--background-color:#d6e7f9;-->
+}
+.profile{
+    border-top: solid 8px #007BFF;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    padding: 16px 8px;
+    margin: 5% 0%;
+
+    width: 80%;
+
+
+}
+
+.View-btn{
+    color: #FFFFFF;
+    background-color: #80d863;
+    border-radius: 5px;
+    width:80%;
+    height:50%;
+    
+}
+
+.View-btn:hover{
+    background-color: #55b735;
+    cursor: pointer;
+
+}
+
+
+#btn-Message{
+    color: #FFFFFF;
+    background-color: #80d863;
+    border-radius: 5px;
+    width:40%;
+    height:50%;
+    padding: 2%;
+    
+}
+
+#btn-Message:hover{
+    background-color: #55b735;
+    cursor: pointer;
+
+}
+
+#btn-Follow{
+    color: #FFFFFF;
+    background-color: #007BFF;
+    border-radius: 5px;
+    width:40%;
+    height:50%;
+    padding: 2%;
+    
+}
+
+#btn-Follow:hover{
+    background-color: #006bdd;
+    cursor: pointer;
+
+}
+
+
+#profilePic{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+
+}
+
+
+#profilePic2{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+
+}
+
+
+.profilePanel{
+    display:grid;
+    grid-template: 1.5fr 1fr 1fr 1ft .5fr/ 1fr 1fr;
+    border-radius: 8px;
+    padding: 15px 18px;
+    
+    background-color: #e3eef9;
+
+
+
+}
+
+
+
+
+
+#subPanel1{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start:1;
+    grid-column-end: 2;
+    text-align: center;
+
+
+
+
+}
+
+#subPanel2{
+    
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start:2;
+    grid-column-end: 3;
+
+
+}
+
+#subPanel3{
+    
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start:1;
+    grid-column-end: 3;
+    text-align: left;
+
+}
+
+#subPanel4{
+    
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start:1;
+    grid-column-end: 3;
+    text-align:center;
+
+}

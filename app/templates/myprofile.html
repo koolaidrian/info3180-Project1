@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+
+{% block css %}
+
+<link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename = 'css/Profile.css')}}">
+
+{%endblock%}
+
+{% block main %}
+{% for user in users %}
+<div class = "profile profilePanel">
+    <div id = "subPanel1">
+	<img id = "profilePic2" src = "{{ url_for('static',filename = 'uploads/' + user.profile_pic)}}" alt = "{{ url_for('static',filename = 'uploads/default.png')}}">
+       
+    </div>
+
+    <div id = "subPanel2">	
+        <h1>{{user.first_name}} {{user.last_name}}</h1>
+        <h3>{{user.email}}</h3>
+        <h3>{{user.location}}</h3>
+	<h3>{{user.date_created}}</h3>
+
+    </div>
+        
+
+
+    <div id = "subPanel3">
+	<h3> About me </h3>
+	<p>{{user.biography}}</p>
+    </div>
+
+       
+
+     <div id = "subPanel4"">
+          <button id = "btn-Message" type = "button">Send Messages</button>
+          <button id = "btn-Follow" type = "button">Follow</button>
+      </div>
+
+</div>
+
+{% endfor %}
+{%endblock%}

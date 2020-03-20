@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+
+{% block css %}
+<link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename = 'css/Flexbox.css')}}">
+<link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename = 'css/Grid.css')}}">
+<link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename = 'css/Profile.css')}}">
+{% endblock %}
+
+{% block main %}
+{% include 'flash_messages.html' %}
+<h1 class = "page-header"> Profiles </h1>
+{% if users %}
+   <div class = "flexbox">
+	{% for user in users %}
+	   <div class = "profile">
+		<div class = "Grid">
+		  <div class = "Grid-Panel-Left">
+		  <img id = "profilePic"src = "{{ url_for('static',filename = 'uploads/' + user.profile_pic)}}">
+			
+		  </div>
+
+		  <div class = "Grid-Panel-Middle">
+		  {{user.first_name}} {{user.last_name}} <br>
+		  {{user.gender}} <br>
+		  {{user.location}}
+		  </div>
+
+		  <div class = "Grid-Panel_Right">
+		  <a href = "{{ url_for('myprofile',userid = user.id) }} "> <button class = "View-btn" type = "button"> View Profile </button> </a>
+			
+		  </div>
+		
+		</div>
+	   </div>
+	{% endfor %}
+    </div>
+    {% else %}
+	<p> There are currently no profiles. </p>
+
+{% endif %}
+
+{% endblock %}
